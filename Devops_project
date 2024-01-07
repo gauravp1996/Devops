@@ -1,2 +1,31 @@
-echo "Hello World"
-
+pipeline {
+    agent any
+    
+    stages {
+        stage('Checkout') {
+            steps {
+                // Checkout code from GitHub repository
+              //  git credentialsId: 'github_credentials', url: 'https://github.com/your_username/your_repository.git'
+            }
+        }
+        
+        stage('Build') {
+            steps {
+                echo 'Build'
+            }
+        }
+        
+        stage('Test') {
+            steps {
+                // Example: Run tests (replace with your testing commands)
+                echo 'Test'
+            }
+        }
+        
+        stage('Deploy') {
+            steps {
+                // Example: Deploy to a server (replace with your deployment commands)
+                echo 'Deploy'
+            }
+        }
+    }
