@@ -24,15 +24,14 @@ pipeline {
         }
     }
     post {
-            always {
-                echo 'Deploying....'
-            }
-            failure {
-                echo 'failed...'
-            }
-            success {
-                echo 'success...'
-            }
+        always {
+            echo 'Deploying....'
         }
-
+        failure {
+            echo 'failed...'
+        }
+        success {
+             echo 'success...'
+        }
+    }
 }
